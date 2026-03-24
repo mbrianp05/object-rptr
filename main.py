@@ -70,12 +70,12 @@ def print_stylistic_list(title: str, items: List[Any]):
 try:
   # Estos son los datos de los integrantes del equipo
   people = [
-    Person(name="Brian", lastname="Monteagudo Pérez", group=21, team=5),
+    Person(name="Brian", lastname="Monteagudo Pérez", group=-21, team=5),
     Person(name="Javier David", lastname="Coroas Cintra", group=21, team=5),
   ]
   
   print_stylistic_list("Personas registradas", people)
 
 except Exception as error:
-  error_message, = error.args
+  error_message, *_ = error.args
   print(error_message)
