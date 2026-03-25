@@ -55,7 +55,6 @@ class Group(int):
     
     return super().__new__(cls, value)
     
-
 def print_stylistic_list[T](title: str, items: List[T]):
   first_character = "┌"
   in_between_char = "│"
