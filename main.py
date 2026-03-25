@@ -32,13 +32,11 @@ class Person:
   def getTeam(self) -> int:
     return self.__team
 
-  def __repr__(self) -> str:
+  def __str__(self) -> str:
     return f"{self.__name} {self.__lastname} del grupo {self.__group} y del equipo {self.__team}"
 
 class Group(int):
   def __new__(cls, value: int) -> Self:
-    print(cls)
-
     if value < 11:
       raise ValueError("El número del grupo debe ser como mínimo 11")
 
