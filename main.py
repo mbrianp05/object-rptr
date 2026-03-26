@@ -6,17 +6,17 @@ class Group(int):
         if value < 11:
             raise ValueError("El número del grupo debe ser como mínimo 11")
 
-        value = str(value)
+        str_value = str(value)
 
-        if len(value) != 2:
+        if len(str_value) != 2:
             raise ValueError("El grupo debe tener 2 cifras")
 
-        if int(value[0]) > 4:
+        if int(str_value[0]) > 4:
             raise ValueError(
                 "El grupo empieza por el año por lo que la primera cifra no puede ser mayor que 4"
             )
 
-        if int(value[1]) == 0:
+        if int(str_value[1]) == 0:
             raise ValueError("El segundo dígito del grupo debe ser mayor que 0")
 
         return super().__new__(cls, value)
